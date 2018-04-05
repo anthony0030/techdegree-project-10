@@ -1,0 +1,34 @@
+// ==========================================================================
+// Base
+// ==========================================================================
+
+
+
+// In your base folder, include a normalize.css file and create a base.scss file. In the base.scss file, you can only apply styles to three different elements directly:
+// the universal selector (*)
+// ul elements
+// p elements
+
+
+*
+  box-sizing: border-box
+  // overflow-x: hidden; // disable vertical Scroll Bars
+  user-select: none; // Disables acidental highliting by the user
+
+
+body
+  background-color: $color-shadow
+
+a
+  cursor: pointer !important
+
+
+
+
+.container
+  margin: 0
+  width: 80%
+  padding-top: em(40px)
+  margin: auto
+  display: flex
+  flex-direction: column
