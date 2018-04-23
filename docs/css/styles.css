@@ -58,9 +58,6 @@ a {
 
 main {
   margin-top: 50px; }
-  @media (min-width: 769px) {
-    main {
-      margin-top: 250px; } }
 
 .container {
   margin: 0;
