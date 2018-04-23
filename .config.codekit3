@@ -341,19 +341,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/source\/css\/components\/_navigation.sass": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 2,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/docs\/css\/components\/_navigation.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/source\/css\/components\/_on-off-switch.sass": {
 		"aP": 0,
 		"bl": 0,
