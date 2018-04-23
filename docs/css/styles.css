@@ -64,7 +64,8 @@ main {
   padding-top: 2.5em;
   margin: auto;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-between; }
   @media (min-width: 1024px) {
     .container {
       width: 80%; } }
@@ -159,7 +160,8 @@ h1 {
   text-align: center; }
   @media (min-width: 769px) {
     .main__title {
-      text-align: left; } }
+      text-align: left;
+      margin: 0 60px; } }
 
 h5 {
   text-transform: uppercase;
