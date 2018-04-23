@@ -19,11 +19,20 @@
     font-weight: $font-weight--medium
     color: $grey
     margin: 0
+    margin-top: 10px
   &__photo
     display: inline-block
     margin-right: 15px
+    align-self: center
+    @include mq(medium)
+      align-self: left
   &__details
     display: inline-block
+    align-self: center
+    text-align: center
+    @include mq(medium)
+      align-self: left
+      text-align: left
   &__avatar
     border-radius: $br--round
     display: inline-block
@@ -38,11 +47,18 @@
 
 .user-pain__window
   display: flex
+  flex-direction: column
+  align-self: center
   border-radius: $br--rounded
   border: 2px solid $grey--light
   background-color: $white
-  width: 400px
-  height: 180px
+  width: 90%
+  height: 300px
   padding: 25px
   margin: 15px
+  @include mq(medium)
+    flex-direction: row
+    width: 400px
+    height: 180px
+
 
