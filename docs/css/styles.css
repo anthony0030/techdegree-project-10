@@ -158,6 +158,12 @@ h1 {
   margin: 5px;
   font-size: 30px; }
 
+.main__title {
+  text-align: center; }
+  @media (min-width: 769px) {
+    .main__title {
+      text-align: left; } }
+
 h5 {
   text-transform: uppercase;
   color: #404a51; }
