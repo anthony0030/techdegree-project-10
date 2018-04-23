@@ -419,6 +419,32 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/source\/css\/components\/_user-modal.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/docs\/css\/components\/_user-modal.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/source\/css\/components\/_user-pain.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/docs\/css\/components\/_user-pain.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/source\/css\/components\/_user.sass": {
 		"aP": 0,
 		"bl": 0,
@@ -428,19 +454,6 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/docs\/css\/components\/_user.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
-	"\/source\/css\/components\/_userpain.sass": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 2,
-		"ma": 1,
-		"oA": 1,
-		"oAP": "\/docs\/css\/components\/_userpain.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
