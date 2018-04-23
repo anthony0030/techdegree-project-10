@@ -598,11 +598,14 @@ h1.logo {
 
 .search__form {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   width: 100%; }
+  @media (min-width: 769px) {
+    .search__form {
+      width: 50%; } }
 
 .search__box {
-  width: 95%;
+  width: 80%;
   height: 40px;
   padding: 10px;
   cursor: text;
@@ -611,6 +614,17 @@ h1.logo {
   border-bottom-left-radius: 10px;
   border-right: none;
   align-self: center; }
+  @media (min-width: 769px) {
+    .search__box {
+      width: 50%; } }
+
+.top__search {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  @media (min-width: 1024px) {
+    .top__search {
+      flex-direction: row; } }
 
 .search__button {
   width: 40px;
