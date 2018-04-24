@@ -46,6 +46,15 @@ html {
 .form__input:focus, .form__input--valid:focus, .form__input--invalid:focus, .timezone-selector:focus, .search__box:focus, .search__button:focus {
   outline: none; }
 
+.lowercase {
+  text-transform: lowercase; }
+
+.uppercase {
+  text-transform: uppercase; }
+
+.capitalize {
+  text-transform: capitalize; }
+
 * {
   box-sizing: border-box;
   user-select: none; }
