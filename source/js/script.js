@@ -39,7 +39,7 @@ function printUser(data){
   console.log(data)
   // console.log(data.gender)
   const avatarSrc = data.picture.large;
-  const nameText = capitalizeFirstLetter(data.name.first) + " " + capitalizeFirstLetter(data.name.last);
+  const nameText = data.name.first + " " + data.name.last;
   const emailText = data.email;
   const placeText = data.location.state;
 
@@ -61,6 +61,7 @@ function printUser(data){
 
   const name = document.createElement("H2");
   name.classList.add("user-pain__title");
+  name.classList.add("capitalize");
   name.appendChild(document.createTextNode(nameText));
   details.appendChild(name);
 
@@ -83,7 +84,7 @@ function printUserModal(data){
   console.log(data)
   // console.log(data.gender)
   const avatarSrc = data.picture.large;
-  const nameText = capitalizeFirstLetter(data.name.first) + " " + capitalizeFirstLetter(data.name.last);
+  const nameText = data.name.first + " " + data.name.last;
   const emailText = data.email;
   const placeText = data.location.state;
   const phoneText = data.cell;
@@ -104,6 +105,7 @@ function printUserModal(data){
 
   const name = document.createElement("H2");
   name.classList.add("user-modal__name");
+  name.classList.add("capitalize");
   name.appendChild(document.createTextNode(nameText));
   modal.appendChild(name);
 
