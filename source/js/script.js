@@ -46,7 +46,7 @@ function printUser(data){
   user.classList.add("user-pain__window");
 
   const photo = document.createElement("DIV");
-  user.classList.add("user-pain__photo");
+  photo.classList.add("user-pain__photo");
   user.appendChild(photo);
 
   const avatar = document.createElement("IMG");
@@ -55,7 +55,7 @@ function printUser(data){
   photo.appendChild(avatar);
 
   const details = document.createElement("DIV");
-  user.classList.add("user-pain__details");
+  details.classList.add("user-pain__details");
   user.appendChild(details);
 
   const name = document.createElement("H2");
@@ -74,7 +74,7 @@ function printUser(data){
   details.appendChild(place);
 
   userContainer.appendChild(user);
-  userusers = $(".user-modal");
+  users = $(".user-modal");
 
 } // end of printUser
 
