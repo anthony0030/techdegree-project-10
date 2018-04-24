@@ -24,12 +24,6 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"\/docs": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "\/docs\/docs",
-		"oF": 0
-		},
 	"\/README.md": {
 		"cB": 0,
 		"cS": 0,
@@ -760,7 +754,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-wonka",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 546166941
+	"lastBuiltDate": 546259167
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

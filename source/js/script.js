@@ -29,6 +29,7 @@ $.ajax({
       printUser(data.results[index]);
       // console.log(data.results[index]);
       console.log(index)
+      activateUsers()
     });
   }
 });
@@ -74,7 +75,6 @@ function printUser(data){
   details.appendChild(place);
 
   userContainer.appendChild(user);
-  users = $(".user-modal");
 
 } // end of printUser
 
@@ -136,7 +136,6 @@ function printUserModal(data){
   modal.appendChild(bday);
 
   modalContainer.appendChild(modal);
-  userModals = $(".user-modal");
 
 } // end of printUserModal
 
@@ -156,14 +155,17 @@ modalContainer.addEventListener("click", function(event){
 
 
 
-
-$.each(users, function(index, value) {
-  value.addEventListener("click", function(event){
-    modalContainer.style.display = "block";
-    userModals[index].style.display = "block";
-    currentVisibleUser = index;
-  })
-});
+function activateUsers(){
+  userModals = $(".user-modal");
+  users = $(".user-pain__window");
+  $.each(users, function(index, value) {
+    value.addEventListener("click", function(event){
+      modalContainer.style.display = "block";
+      userModals[index].style.display = "block";
+      currentVisibleUser = index;
+    })
+  });
+}
 
 
 // $.each(userModals, function(index, value) {
