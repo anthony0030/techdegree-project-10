@@ -862,8 +862,20 @@ h1.logo {
       fill: #ffffff; }
   #user-modals #previous-user svg {
     left: -20px; }
+    @media (min-width: 769px) {
+      #user-modals #previous-user svg {
+        left: 10%; } }
+    @media (min-width: 1024px) {
+      #user-modals #previous-user svg {
+        left: 20%; } }
   #user-modals #next-user svg {
     right: -20px; }
+    @media (min-width: 769px) {
+      #user-modals #next-user svg {
+        right: 10%; } }
+    @media (min-width: 1024px) {
+      #user-modals #next-user svg {
+        right: 20%; } }
 
 @keyframes slideDown {
   from {
