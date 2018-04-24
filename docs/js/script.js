@@ -139,34 +139,33 @@ function activateUsers(){
   });
 }
 
-
-previousUser.addEventListener("click", function(event){
-  console.log("prev user")
-   if(currentVisibleUser > 0){ 
-    userModals[currentVisibleUser].style.display= "none";
-    userModals[currentVisibleUser-1].style.display= "block";
-    currentVisibleUser--;
-   }else{
+function activateArrows(){
+  previousUser.addEventListener("click", function(event){
+    console.log("prev user")
+     if(currentVisibleUser > 0){ 
       userModals[currentVisibleUser].style.display= "none";
-      userModals[userModals.length-1].style.display= "block";
-      currentVisibleUser = userModals.length-1;
-   }
-})
-
-
-nextUser.addEventListener("click", function(event){
-  console.log("next user")
-  if(currentVisibleUser < userModals.length-1){ 
-    userModals[currentVisibleUser].style.display= "none";
-    userModals[currentVisibleUser+1].style.display= "block";
-    currentVisibleUser++;
-  }else{
-    userModals[currentVisibleUser].style.display= "none";
-    userModals[0].style.display= "block";
-    currentVisibleUser = 0;
-  }
-})
-
+      userModals[currentVisibleUser-1].style.display= "block";
+      currentVisibleUser--;
+     }else{
+        userModals[currentVisibleUser].style.display= "none";
+        userModals[userModals.length-1].style.display= "block";
+        currentVisibleUser = userModals.length-1;
+     }
+  })
+  
+  nextUser.addEventListener("click", function(event){
+    console.log("next user")
+    if(currentVisibleUser < userModals.length-1){ 
+      userModals[currentVisibleUser].style.display= "none";
+      userModals[currentVisibleUser+1].style.display= "block";
+      currentVisibleUser++;
+    }else{
+      userModals[currentVisibleUser].style.display= "none";
+      userModals[0].style.display= "block";
+      currentVisibleUser = 0;
+    }
+  })
+}
 
 $.ajax({
   url: 'https://randomuser.me/api/?results=12',
@@ -175,10 +174,9 @@ $.ajax({
     $.each(data.results, function( index, value ) {
       printUserModal(data.results[index]);
       printUser(data.results[index]);
-      // console.log(data.results[index]);
-      console.log(index)
-      activateUsers()
     });
+    activateUsers();
+    activateArrows();
   }
 });
 // }); // End of document reddy
