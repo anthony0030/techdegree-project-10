@@ -792,7 +792,7 @@ h1.logo {
   @media (min-width: 769px) {
     .user-pain__window {
       flex-direction: row;
-      width: 400px;
+      width: 450px;
       height: 180px; } }
 
 #user-modals {
