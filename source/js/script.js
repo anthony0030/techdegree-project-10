@@ -57,6 +57,7 @@ function printUser(data){
 function printUserModal(data){
   console.log(data)
   // console.log(data.gender)
+  const closeText = "×"
   const avatarSrc = data.picture.large;
   const nameText = data.name.first + " " + data.name.last;
   const emailText = data.email;
@@ -70,6 +71,7 @@ function printUserModal(data){
 
   const close = document.createElement("SPAN");
   close.classList.add("close");
+  close.appendChild(document.createTextNode(closeText));
   modal.appendChild(close);
 
   const avatar = document.createElement("IMG");
