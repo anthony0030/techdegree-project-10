@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+// $( document ).ready(function() {
 const modalContainer = document.getElementById("user-modals");
 const users = $(".user-pain__window");
 const userModals = $(".user-modal");
@@ -32,13 +32,10 @@ modalContainer.addEventListener("click", function(event){
 
 
 $.each(users, function(index, value) {
-
-  
   value.addEventListener("click", function(event){
     modalContainer.style.display = "block";
     userModals[index].style.display = "block";
     currentVisibleUser = index;
-    console.log(currentVisibleUser)
   })
 });
 
@@ -51,18 +48,30 @@ $.each(users, function(index, value) {
 
 
 previousUser.addEventListener("click", function(event){
-  userModals[currentVisibleUser].style.display= "none"
-  userModals[currentVisibleUser-1].style.display= "block"
-  currentVisibleUser--;
   console.log("prev user")
+   if(currentVisibleUser > 0){ 
+    userModals[currentVisibleUser].style.display= "none"
+    userModals[currentVisibleUser-1].style.display= "block"
+    currentVisibleUser--;
+   }else{
+      userModals[currentVisibleUser].style.display= "none"
+      userModals[userModals.length-1].style.display= "block"
+      currentVisibleUser = userModals.length-1;
+   }
 })
 
 
 nextUser.addEventListener("click", function(event){
-  userModals[currentVisibleUser].style.display= "none"
-  userModals[currentVisibleUser+1].style.display= "block"
-  currentVisibleUser++;
   console.log("next user")
+  if(currentVisibleUser < userModals.length-1){ 
+    userModals[currentVisibleUser].style.display= "none"
+    userModals[currentVisibleUser+1].style.display= "block"
+    currentVisibleUser++;
+  }else{
+    userModals[currentVisibleUser].style.display= "none"
+    userModals[0].style.display= "block"
+    currentVisibleUser = 0;
+  }
 })
 
 
@@ -75,4 +84,4 @@ nextUser.addEventListener("click", function(event){
 
 
 
-}); // End of document reddy
+// }); // End of document reddy
