@@ -1,8 +1,16 @@
 // $( document ).ready(function() {
+
+const usersToMake = 12;
+
+const searchButton = document.getElementById("search__button");
+const searchQuestion = document.getElementById("search__question");
 const modalContainer = document.getElementById("user-modals");
 const userContainer = document.getElementById("users");
 var users = $(".user-pain__window");
 var userModals = $(".user-modal");
+var showUsers = [];
+const usersNames = [];
+const usersUsernames = [];
 
 const nextUser = document.getElementById("next-user");
 const previousUser = document.getElementById("previous-user");
@@ -10,12 +18,13 @@ const previousUser = document.getElementById("previous-user");
 var currentVisibleUser;
 
 function printUser(data){
-  console.log(data)
+  // console.log(data)
   // console.log(data.gender)
   const avatarSrc = data.picture.large;
   const nameText = data.name.first + " " + data.name.last;
   const emailText = data.email;
   const placeText = data.location.state;
+  const usernameText = data.login.username 
 
   const user = document.createElement("DIV");
   user.classList.add("user-pain__window");
@@ -50,12 +59,14 @@ function printUser(data){
   details.appendChild(place);
 
   userContainer.appendChild(user);
-
+  usersNames.push(nameText)
+  usersUsernames.push(usernameText)
+  showUsers.push(true);
 } // end of printUser
 
 
 function printUserModal(data){
-  console.log(data)
+  // console.log(data)
   // console.log(data.gender)
   const closeText = "×"
   const avatarSrc = data.picture.large;
@@ -179,4 +190,38 @@ $.ajax({
     activateArrows();
   }
 });
+
+function fliterUsers(){
+  var usersToShow = users;
+
+  userContainer.innerHTML = "";
+
+  for (var i = 0; i < usersToMake; i++) { 
+    if(usersUsernames[i].includes(searchQuestion.value) || usersNames[i].includes(searchQuestion.value) || searchQuestion.value.trim() === ""){
+     showUsers[i] = true;
+     userContainer.appendChild(usersToShow[i]);
+    }
+    else{
+      showUsers[i] = false;
+    } 
+  }
+}
+
+
+
+
+
+searchButton.addEventListener("click", function(event){
+  event.preventDefault();
+  console.log("searching for " + searchQuestion.value);
+  fliterUsers(searchQuestion.value);
+});
+
+searchQuestion.addEventListener("keyup", function(event){
+  console.log("searching for " + searchQuestion.value)
+  fliterUsers(searchQuestion.value);
+});
+
+
+
 // }); // End of document reddy
