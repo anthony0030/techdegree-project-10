@@ -4,36 +4,10 @@ const userContainer = document.getElementById("users");
 var users = $(".user-pain__window");
 var userModals = $(".user-modal");
 
-
 const nextUser = document.getElementById("next-user");
 const previousUser = document.getElementById("previous-user");
 
 var currentVisibleUser;
-
-
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-
-
-
-
-
-$.ajax({
-  url: 'https://randomuser.me/api/?results=12',
-  dataType: 'json',
-  success: function(data) {
-    $.each(data.results, function( index, value ) {
-      printUserModal(data.results[index]);
-      printUser(data.results[index]);
-      // console.log(data.results[index]);
-      console.log(index)
-      activateUsers()
-    });
-  }
-});
-     
 
 function printUser(data){
   console.log(data)
@@ -141,8 +115,6 @@ function printUserModal(data){
 
 } // end of printUserModal
 
-
-
 modalContainer.addEventListener("click", function(event){
   if(event.target === modalContainer || event.target.className === "close"){
     modalContainer.style.display = "none";
@@ -151,10 +123,6 @@ modalContainer.addEventListener("click", function(event){
     })
   }
 });
-
-
-
-
 
 
 function activateUsers(){
@@ -168,13 +136,6 @@ function activateUsers(){
     })
   });
 }
-
-
-// $.each(userModals, function(index, value) {
-// });
-
-
-
 
 
 previousUser.addEventListener("click", function(event){
@@ -205,4 +166,17 @@ nextUser.addEventListener("click", function(event){
 })
 
 
+$.ajax({
+  url: 'https://randomuser.me/api/?results=12',
+  dataType: 'json',
+  success: function(data) {
+    $.each(data.results, function( index, value ) {
+      printUserModal(data.results[index]);
+      printUser(data.results[index]);
+      // console.log(data.results[index]);
+      console.log(index)
+      activateUsers()
+    });
+  }
+});
 // }); // End of document reddy
