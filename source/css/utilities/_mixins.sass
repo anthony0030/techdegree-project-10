@@ -34,6 +34,10 @@
     @media (min-width: $brkpoint-lg)
       @content
 
+  @else if $break == "giga"
+    @media (min-width: $brkpoint-xl)
+      @content
+
   @else
     @error "There is no breakpoint named: `#{$break}`. "
 
