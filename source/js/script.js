@@ -42,7 +42,7 @@ function printUser(data, index){
   const avatarSrc = data.picture.large;
   const nameText = data.name.first + " " + data.name.last;
   const emailText = data.email;
-  const placeText = data.location.state;
+  const placeText = toTitleCase(data.location.state);
   const usernameText = data.login.username;
 
   const user = document.createElement("DIV");
@@ -201,7 +201,7 @@ function calcActiveUsers(){
 
 function goToPreviousUser(){
   if(currentVisibleUser >= 0){
-    calcActiveUsers()
+    calcActiveUsers();
     // console.log("prev user RUN")
     if(currentVisibleUser > firstActiveUser){
       userModals[currentVisibleUser].style.display= "none";
@@ -218,7 +218,7 @@ function goToPreviousUser(){
 
 function goToNextUser(){
   if(currentVisibleUser >= 0){
-    calcActiveUsers()
+    calcActiveUsers();
     // console.log("next user RUN")
     if(currentVisibleUser < lastActiveUser){
       userModals[currentVisibleUser].style.display= "none";
@@ -234,8 +234,8 @@ function goToNextUser(){
 
 
 $.ajax({
-  url: 'https://randomuser.me/api/?results='+usersToMake+'&nat='+userNationalities,
-  dataType: 'json',
+  url: "https://randomuser.me/api/?results="+usersToMake+"&nat="+userNationalities,
+  dataType: "json",
   success: function(data){
     $.each(data.results, function( index, value ){
       printUserModal(data.results[index],index);
@@ -335,7 +335,7 @@ function keyDownTextField(event) {
 
 
 document.addEventListener("keyup", keyDownTextField, false);
-searchQuestion.removeEventListener("keyup", keyDownTextField, true); 
+searchQuestion.removeEventListener("keyup", keyDownTextField, true);
 
 modalContainer.addEventListener("click", function(event){
   if(event.target === modalContainer || event.target.className === "close"){
@@ -345,11 +345,11 @@ modalContainer.addEventListener("click", function(event){
 
 previousUser.addEventListener("click", function(event){
   goToPreviousUser(event);
-})
+});
 
 nextUser.addEventListener("click", function(event){
   goToNextUser(event);
-})
+});
 
 searchButton.addEventListener("click", function(event){
   event.preventDefault();
