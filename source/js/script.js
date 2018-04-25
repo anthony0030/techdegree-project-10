@@ -1,7 +1,15 @@
+//converts dateformat from "2014-12-11 14:35:49" into 11/12/14
+function dateConverter(date){ 
+  const splitDate = date.split("-");
+  const year = splitDate[0].substring(2);
+  const month = splitDate[1];
+  const splitDay = splitDate[2].split(" ");
+  const day = splitDay[0];
+  return day + "/" + month + "/" + year;
+}
+
+
 // $( document ).ready(function() {
-
-
-
 
 const usersToMake = 12;
 
@@ -28,7 +36,7 @@ function printUser(data, index){
   // console.log(data)
   // console.log(data.gender)
   const avatarSrc = data.picture.large;
-  const nameText = data.name.first + " " + data.name.last + " " + index;
+  const nameText = data.name.first + " " + data.name.last;
   const emailText = data.email;
   const placeText = data.location.state;
   const usernameText = data.login.username 
@@ -77,12 +85,12 @@ function printUserModal(data, index){
   // console.log(data.gender)
   const closeText = "×"
   const avatarSrc = data.picture.large;
-  const nameText = data.name.first + " " + data.name.last + " " + index;
+  const nameText = data.name.first + " " + data.name.last;
   const emailText = data.email;
   const placeText = data.location.state;
   const phoneText = data.cell;
   const addressText = data.location.street;
-  const bdayText = data.dob;
+  const bdayText = "Birthday: " + dateConverter(data.dob);
 
   const modal = document.createElement("DIV");
   modal.classList.add("user-modal");
