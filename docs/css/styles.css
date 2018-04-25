@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 @import url(../bower_components/normalize-css/normalize.css);
 .grid:after {
   content: "";
@@ -95,7 +95,7 @@ main {
   transform: scale(1, 1.5);
   font-size: 30px;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 300;
   display: none;
   margin: 0; }
 
@@ -133,11 +133,11 @@ main {
     display: inline-block; } }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100; }
 
 p {
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Roboto", sans-serif; }
 
 h1 {
   margin: 5px;
@@ -556,7 +556,7 @@ h1.logo {
   display: inline-block;
   padding: 5px 10px;
   border-radius: 20px;
-  font-weight: 700; }
+  font-weight: 500; }
   .visits__option:hover:not([class$=active]), .visits__option--active:hover:not([class$=active]) {
     background-color: #dfdfdf; }
   .visits__option + .visits__option, .visits__option--active + .visits__option, .visits__option + .visits__option--active, .visits__option--active + .visits__option--active {
@@ -567,7 +567,7 @@ h1.logo {
 
 .dashboard__title {
   color: #404a51;
-  font-weight: 300;
+  font-weight: 100;
   font-size: 24px;
   text-align: center;
   margin: 0; }
@@ -734,11 +734,11 @@ h1.logo {
     color: #83898d; }
   .user-pain__email {
     color: #83898d;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 20px;
     margin: 0; }
   .user-pain__place {
-    font-weight: 600;
+    font-weight: 400;
     color: #83898d;
     margin: 0;
     margin-top: 10px; }
@@ -820,10 +820,11 @@ h1.logo {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     animation-name: slideDown;
     animation-duration: 0.4s;
-    font-weight: bold;
+    font-weight: 100;
+    font-size: 20px;
     border-radius: 10px;
     border: 2px solid #dfdfdf;
-    width: 460px;
+    width: 500px;
     max-width: 80%;
     height: 600px;
     text-align: center;
