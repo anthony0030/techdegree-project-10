@@ -1,5 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 @import url(../bower_components/normalize-css/normalize.css);
+html {
+  /* ----------------------------*/
+  /* Screen size indicator Start */
+  /* ----------------------------*/
+  /* ----------------------------*/
+  /* Screen size indicator end   */
+  /* ----------------------------*/ }
+  html body::before {
+    z-index: 99999;
+    color: red;
+    position: fixed;
+    top: 0;
+    left: 0; }
+    @media (min-width: 320px) {
+      html body::before {
+        content: "MOBILE"; } }
+    @media (min-width: 768px) {
+      html body::before {
+        content: "TABLET"; } }
+    @media (min-width: 1024px) {
+      html body::before {
+        content: "DESKTOP"; } }
+
 .grid:after {
   content: "";
   display: table;
@@ -874,7 +897,7 @@ h1.logo {
     margin-right: 15px;
     -ms-flex-item-align: center;
         align-self: center; }
-    @media (min-width: 769px) {
+    @media (min-width: 1024px) {
       .user-pain__photo {
         -ms-flex-item-align: left;
             align-self: left; } }
@@ -883,7 +906,7 @@ h1.logo {
     -ms-flex-item-align: center;
         align-self: center;
     text-align: center; }
-    @media (min-width: 769px) {
+    @media (min-width: 1024px) {
       .user-pain__details {
         -ms-flex-item-align: left;
             align-self: left;
@@ -909,7 +932,7 @@ h1.logo {
     width: 90%;
     height: 300px;
     padding: 25px;
-    margin: 15px;
+    margin: 15px auto;
     -webkit-transition: -webkit-transform 250ms;
     transition: -webkit-transform 250ms;
     transition: transform 250ms;
@@ -918,13 +941,13 @@ h1.logo {
       border-color: #83898d;
       -webkit-transform: scale(1.05);
               transform: scale(1.05); }
-    @media (min-width: 769px) {
+    @media (min-width: 1024px) {
       .user-pain__window {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
                 flex-direction: row;
-        width: 450px;
+        width: 404px;
         height: 180px; } }
 
 #user-modals {

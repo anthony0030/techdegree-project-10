@@ -24,13 +24,13 @@
     display: inline-block
     margin-right: 15px
     align-self: center
-    @include mq(medium)
+    @include mq(large)
       align-self: left
   &__details
     display: inline-block
     align-self: center
     text-align: center
-    @include mq(medium)
+    @include mq(large)
       align-self: left
       text-align: left
   &__avatar
@@ -49,12 +49,12 @@
     width: 90%
     height: 300px
     padding: 25px
-    margin: 15px
+    margin: 15px auto
     transition: transform 250ms
     &:hover
       border-color: $grey
       transform: scale(1.05)
-    @include mq(medium)
+    @include mq(large)
       flex-direction: row
-      width: 450px
+      width: 404px
       height: 180px
