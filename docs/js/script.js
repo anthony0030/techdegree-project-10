@@ -256,6 +256,29 @@ function fliterUsers(){
 
 
 
+function keyDownTextField(e) {
+  switch (e.keyCode) {
+
+    case 37:
+      alert('left');
+    break;
+
+    case 38:
+      alert('up');
+    break;
+
+    case 39:
+      alert('right');
+    break;
+
+    case 40:
+      alert('down');
+    break;
+  }
+}
+
+
+document.addEventListener("keydown", keyDownTextField, false);
 
 
 searchButton.addEventListener("click", function(event){
