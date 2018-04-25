@@ -262,23 +262,28 @@ function fliterUsers(){
 
 
 
-function keyDownTextField(e) {
-  switch (e.keyCode) {
+function keyDownTextField(event) {
+  event.preventDefault();
+  switch (event.keyCode) {
 
     case 37:
-      alert('left');
+      // alert('left');
+      goToPreviousUser();
     break;
 
     case 38:
-      alert('up');
+      // alert('up');
+      goToNextUser();
     break;
 
     case 39:
-      alert('right');
+      // alert('right');
+      goToNextUser();
     break;
 
     case 40:
-      alert('down');
+      // alert('down');
+      goToPreviousUser();
     break;
   }
 }
