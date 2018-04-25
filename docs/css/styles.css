@@ -848,11 +848,16 @@ h1.logo {
     #user-modals #previous-user svg:active,
     #user-modals #next-user svg:active {
       fill: #ffffff; }
+    @media (min-width: 769px) {
+      #user-modals #previous-user svg,
+      #user-modals #next-user svg {
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%; } }
   #user-modals #previous-user svg {
     left: -20px; }
     @media (min-width: 769px) {
       #user-modals #previous-user svg {
-        left: 10%; } }
+        left: 8%; } }
     @media (min-width: 1024px) {
       #user-modals #previous-user svg {
         left: 20%; } }
@@ -860,7 +865,7 @@ h1.logo {
     right: -20px; }
     @media (min-width: 769px) {
       #user-modals #next-user svg {
-        right: 10%; } }
+        right: 8%; } }
     @media (min-width: 1024px) {
       #user-modals #next-user svg {
         right: 20%; } }
