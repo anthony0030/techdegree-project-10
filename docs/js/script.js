@@ -185,20 +185,20 @@ function calcActiveUsers(){
     }
   } // end of for loop
 
-  console.log("-----------------------------------")
-  console.log("firstActiveUser: " + firstActiveUser)
-  console.log("previusActiveUser: " + previusActiveUser)
-  console.log("currentVisibleUser: " + currentVisibleUser)
-  console.log("nextActiveUser: " + nextActiveUser)
-  console.log("lastActiveUser: " + lastActiveUser)
-  console.log("-----------------------------------")
+  // console.log("-----------------------------------")
+  // console.log("firstActiveUser: " + firstActiveUser)
+  // console.log("previusActiveUser: " + previusActiveUser)
+  // console.log("currentVisibleUser: " + currentVisibleUser)
+  // console.log("nextActiveUser: " + nextActiveUser)
+  // console.log("lastActiveUser: " + lastActiveUser)
+  // console.log("-----------------------------------")
 } // end of calcActiveUsers()
 
 
 
 previousUser.addEventListener("click", function(event){
   calcActiveUsers()
-  console.log("prev user RUN")
+  // console.log("prev user RUN")
   if(currentVisibleUser > firstActiveUser){ 
     userModals[currentVisibleUser].style.display= "none";
     userModals[previusActiveUser].style.display= "block";
@@ -212,7 +212,7 @@ previousUser.addEventListener("click", function(event){
 
 nextUser.addEventListener("click", function(event){
   calcActiveUsers()
-  console.log("next user RUN")
+  // console.log("next user RUN")
   if(currentVisibleUser < lastActiveUser){ 
     userModals[currentVisibleUser].style.display= "none";
     userModals[nextActiveUser].style.display= "block";
@@ -257,12 +257,12 @@ function fliterUsers(){
 
 searchButton.addEventListener("click", function(event){
   event.preventDefault();
-  console.log("searching for " + searchQuestion.value);
+  // console.log("searching for " + searchQuestion.value);
   fliterUsers(searchQuestion.value);
 });
 
 searchQuestion.addEventListener("keyup", function(event){
-  console.log("searching for " + searchQuestion.value)
+  // console.log("searching for " + searchQuestion.value)
   fliterUsers(searchQuestion.value);
 });
 
