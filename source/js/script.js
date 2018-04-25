@@ -452,8 +452,7 @@ const dataToUse = {
     "results": 12,
     "page": 1,
     "version": "1.1"
-  }
-}
+  }}
 
 
 
@@ -473,6 +472,7 @@ const nextUser = document.getElementById("next-user");
 const previousUser = document.getElementById("previous-user");
 
 var currentVisibleUser;
+var previusActiveUser;
 var firstActiveUser;
 var nextActiveUser;
 var lastActiveUser;
@@ -615,14 +615,15 @@ function activateUsers(){
 function calcActiveUsers(){
 
   firstActiveUser = usersToMake-1;
+  previusActiveUser = 0;
   nextActiveUser = -1;
   lastActiveUser = usersToMake-1;
-
+  previusActiveUser = currentVisibleUser;
 
 
   for(var i=0; i<=usersToMake; i++){
-    // debugger;
     if(showUsers[i]){
+      if(i < currentVisibleUser){previusActiveUser = i;}
       if(firstActiveUser >= i){firstActiveUser = i;}
       if(nextActiveUser<=currentVisibleUser){nextActiveUser = i;}
       lastActiveUser = i;
@@ -630,32 +631,33 @@ function calcActiveUsers(){
   } // end of for loop
 
   console.log("-----------------------------------")
-  console.log("next user RUN")
   console.log("firstActiveUser: " + firstActiveUser)
+  console.log("previusActiveUser: " + previusActiveUser)
   console.log("currentVisibleUser: " + currentVisibleUser)
   console.log("nextActiveUser: " + nextActiveUser)
-  console.log("lastActiveUser:" + lastActiveUser)
+  console.log("lastActiveUser: " + lastActiveUser)
   console.log("-----------------------------------")
 } // end of calcActiveUsers()
 
 
 
-// previousUser.addEventListener("click", function(event){
-//   console.log("prev user")
-//   if(currentVisibleUser > 0){ 
-//     userModals[currentVisibleUser].style.display= "none";
-//     userModals[currentVisibleUser-1].style.display= "block";
-//     currentVisibleUser--;
-//   } else {
-//     userModals[currentVisibleUser].style.display= "none";
-//     userModals[userModals.length-1].style.display= "block";
-//     currentVisibleUser = userModals.length-1;
-//   }
-// })
+previousUser.addEventListener("click", function(event){
+  calcActiveUsers()
+  console.log("prev user RUN")
+  if(currentVisibleUser > firstActiveUser){ 
+    userModals[currentVisibleUser].style.display= "none";
+    userModals[previusActiveUser].style.display= "block";
+    currentVisibleUser = previusActiveUser;
+  } else {
+    userModals[currentVisibleUser].style.display= "none";
+    userModals[lastActiveUser].style.display= "block";
+    currentVisibleUser = lastActiveUser;
+  }
+})
 
 nextUser.addEventListener("click", function(event){
   calcActiveUsers()
-  
+  console.log("next user RUN")
   if(currentVisibleUser < lastActiveUser){ 
     userModals[currentVisibleUser].style.display= "none";
     userModals[nextActiveUser].style.display= "block";
@@ -666,7 +668,6 @@ nextUser.addEventListener("click", function(event){
     currentVisibleUser = firstActiveUser;
   }
 })
-
 
 
 $.ajax({
@@ -683,9 +684,7 @@ $.ajax({
 
 function fliterUsers(){
   var usersToShow = users;
-
   userContainer.innerHTML = "";
-
   for (var i = 0; i < usersToMake; i++) {
     if(usersUsernames[i].includes(searchQuestion.value) || usersNames[i].includes(searchQuestion.value) || searchQuestion.value.trim() === ""){
      showUsers[i] = true;
