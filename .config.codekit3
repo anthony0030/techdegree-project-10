@@ -910,7 +910,7 @@
 		"oA": 0,
 		"oAP": "\/docs\/js\/state_abbreviator.js",
 		"oF": 1,
-		"sC": 0,
+		"sC": 3,
 		"tS": 0
 		},
 	"\/source\/logo": {
@@ -1066,7 +1066,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-wonka",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 546365442
+	"lastBuiltDate": 546365613
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
