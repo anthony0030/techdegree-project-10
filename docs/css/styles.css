@@ -800,6 +800,7 @@ h1.logo {
     color: #dfdfdf;
     border-color: #dfdfdf; }
   #user-modals .close {
+    font-weight: 700;
     height: 40px;
     width: 40px;
     font-size: 40px;
