@@ -8,7 +8,6 @@ function dateConverter(date){
   return day + "/" + month + "/" + year;
 }
 
-
 // $( document ).ready(function() {
 
 const usersToMake = 12;
@@ -195,6 +194,7 @@ function calcActiveUsers(){
   // console.log("-----------------------------------")
 } // end of calcActiveUsers()
 
+
 function goToPreviousUser(){
   if(currentVisibleUser >= 0){
     calcActiveUsers()
@@ -210,7 +210,6 @@ function goToPreviousUser(){
     }
   }
 }
-
 
 
 function goToNextUser(){
@@ -230,12 +229,6 @@ function goToNextUser(){
 }
 
 
-
-
-
-
-
-
 $.ajax({
   url: 'https://randomuser.me/api/?results='+usersToMake+'&nat='+userNationalities,
   dataType: 'json',
@@ -248,6 +241,7 @@ $.ajax({
     // console.log(data);
   }
 });
+
 
 function fliterUsers(){
   var usersToShow = users;
@@ -262,7 +256,6 @@ function fliterUsers(){
     }
   }
 }
-
 
 
 function keyDownTextField(event) {
