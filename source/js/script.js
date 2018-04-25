@@ -165,15 +165,36 @@ function activateArrows(){
   })
   
   nextUser.addEventListener("click", function(event){
-    console.log("next user")
-    if(currentVisibleUser < userModals.length-1){ 
+    var firstActiveUser = usersToMake-1;
+    var nextActiveUser = -1;
+    var lastActiveUser = usersToMake-1;
+
+    for(var i=0; i<=usersToMake; i++){
+      if(showUsers[i]){
+        if(firstActiveUser >= i){firstActiveUser = i;}
+        if(nextActiveUser<=currentVisibleUser){nextActiveUser = i+1;}
+        lastActiveUser = i;
+      }
+    }
+
+    console.log("-----------------------------------")
+    console.log("next user RUN")
+    console.log("firstActiveUser: " + firstActiveUser)
+    console.log("currentVisibleUser: " + currentVisibleUser)
+    console.log("nextActiveUser: " + nextActiveUser)
+    console.log("lastActiveUser:" + lastActiveUser)
+    console.log("-----------------------------------")
+
+
+
+    if(currentVisibleUser < lastActiveUser){ 
       userModals[currentVisibleUser].style.display= "none";
-      userModals[currentVisibleUser+1].style.display= "block";
-      currentVisibleUser++;
+      userModals[nextActiveUser].style.display= "block";
+      currentVisibleUser= nextActiveUser;
     }else{
       userModals[currentVisibleUser].style.display= "none";
-      userModals[0].style.display= "block";
-      currentVisibleUser = 0;
+      userModals[firstActiveUser].style.display= "block";
+      currentVisibleUser = firstActiveUser;
     }
   })
 }
