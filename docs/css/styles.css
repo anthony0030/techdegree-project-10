@@ -893,40 +893,39 @@ h1.logo {
     display: inline-block;
     width: 125px;
     height: 125px; }
-
-.user-pain__window {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-item-align: center;
-      align-self: center;
-  border-radius: 10px;
-  border: 2px solid #dfdfdf;
-  background-color: #ffffff;
-  width: 90%;
-  height: 300px;
-  padding: 25px;
-  margin: 15px;
-  -webkit-transition: -webkit-transform 250ms;
-  transition: -webkit-transform 250ms;
-  transition: transform 250ms;
-  transition: transform 250ms, -webkit-transform 250ms; }
-  .user-pain__window:hover {
-    border-color: #83898d;
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05); }
-  @media (min-width: 769px) {
-    .user-pain__window {
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      width: 450px;
-      height: 180px; } }
+  .user-pain__window {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        align-self: center;
+    border-radius: 10px;
+    border: 2px solid #dfdfdf;
+    background-color: #ffffff;
+    width: 90%;
+    height: 300px;
+    padding: 25px;
+    margin: 15px;
+    -webkit-transition: -webkit-transform 250ms;
+    transition: -webkit-transform 250ms;
+    transition: transform 250ms;
+    transition: transform 250ms, -webkit-transform 250ms; }
+    .user-pain__window:hover {
+      border-color: #83898d;
+      -webkit-transform: scale(1.05);
+              transform: scale(1.05); }
+    @media (min-width: 769px) {
+      .user-pain__window {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        width: 450px;
+        height: 180px; } }
 
 #user-modals {
   display: none;

@@ -19,12 +19,12 @@
   width: 100%
 
 
-
 div.contain
   width: 100%
   display: flex
   flex-direction: column
   padding: 5px
+
 
 .no-margin
   margin-top: 0 !important
@@ -32,13 +32,16 @@ div.contain
   margin-bottom: 0 !important
   margin-left: 0 !important
 
+
 .grid__row
   border-bottom: 1px solid $grey--light
+
 
 @include mq(small)
   main
     [class^="grid__col--"] + [class^="grid__col--"]
       border-top: 1px solid $grey--light
+
 
 @include mq(large)
   main
@@ -49,5 +52,3 @@ div.contain
     [class^="grid__col--"]:first-child
       // background-color: red
       margin-left: 60px
-
-

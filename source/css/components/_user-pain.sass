@@ -38,32 +38,23 @@
     display: inline-block
     width: 125px
     height: 125px
-
-
-
-// .user-pain__tile
-//   @extend %user-pain
-
-
-.user-pain__window
-  @extend %hover-hand
-  display: flex
-  flex-direction: column
-  align-self: center
-  border-radius: $br--rounded
-  border: 2px solid $grey--light
-  background-color: $white
-  width: 90%
-  height: 300px
-  padding: 25px
-  margin: 15px
-  transition: transform 250ms
-  &:hover
-    border-color: $grey
-    transform: scale(1.05)
-  @include mq(medium)
-    flex-direction: row
-    width: 450px
-    height: 180px
-
-
+  &__window
+    @extend %hover-hand
+    display: flex
+    flex-direction: column
+    align-self: center
+    border-radius: $br--rounded
+    border: 2px solid $grey--light
+    background-color: $white
+    width: 90%
+    height: 300px
+    padding: 25px
+    margin: 15px
+    transition: transform 250ms
+    &:hover
+      border-color: $grey
+      transform: scale(1.05)
+    @include mq(medium)
+      flex-direction: row
+      width: 450px
+      height: 180px
