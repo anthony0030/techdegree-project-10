@@ -91,10 +91,13 @@ function printUserModal(data, index){
   const avatarSrc = data.picture.large;
   const nameText = data.name.first + " " + data.name.last;
   const emailText = data.email;
-  const placeText = data.location.state;
+  const placeText = toTitleCase(data.location.state);
+  const stateText = convertStateRegion(data.location.state);
   const phoneText = data.cell;
-  const location = data.location;
-  const addressText = location.street+", "+location.city+" "+convertStateRegion(location.state)+" "+location.postcode;
+  const streetText = toTitleCase(data.location.street);
+  const cityText = toTitleCase(data.location.city);
+  const posteCode = data.location.postcode;
+  const addressText = streetText+", "+cityText+" "+stateText+" "+posteCode;
   const bdayText = "Birthday: " + dateConverter(data.dob);
 
   const modal = document.createElement("DIV");
