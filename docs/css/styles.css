@@ -47,7 +47,7 @@ html {
   outline: none; }
 
 .user-pain__window {
-  cursor: pointer; }
+  cursor: pointer !important; }
 
 .lowercase {
   text-transform: lowercase; }
