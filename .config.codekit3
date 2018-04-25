@@ -893,6 +893,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"\/source\/js\/state_abbreviator.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/docs\/js\/state_abbreviator.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
+		},
 	"\/source\/logo": {
 		"ft": 65536,
 		"oA": 1,
@@ -1046,7 +1056,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-wonka",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 546345184
+	"lastBuiltDate": 546352933
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

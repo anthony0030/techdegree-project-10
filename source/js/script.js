@@ -12,7 +12,7 @@ function dateConverter(date){
 // $( document ).ready(function() {
 
 const usersToMake = 12;
-const userNationalities = "US,GB"
+const userNationalities = "US,CA"
 
 const searchButton = document.getElementById("search__button");
 const searchQuestion = document.getElementById("search__question");
@@ -90,7 +90,8 @@ function printUserModal(data, index){
   const emailText = data.email;
   const placeText = data.location.state;
   const phoneText = data.cell;
-  const addressText = data.location.street;
+  const location = data.location
+  const addressText = location.street+", "+location.city+" "+convertStateRegion(location.state)+" "+location.postcode;
   const bdayText = "Birthday: " + dateConverter(data.dob);
 
   const modal = document.createElement("DIV");
