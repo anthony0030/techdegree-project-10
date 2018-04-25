@@ -263,6 +263,11 @@ function fliterUsers(){
 function keyDownTextField(event) {
   event.preventDefault();
   switch (event.keyCode) {
+    case 27:
+      // alert('esc');
+      hideAllUserModals();
+    break;
+
 
     case 37:
       // alert('left');
