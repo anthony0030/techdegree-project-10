@@ -196,12 +196,10 @@ function calcActiveUsers(){
   // console.log("-----------------------------------")
 } // end of calcActiveUsers()
 
-
-
-previousUser.addEventListener("click", function(event){
+function goToPreviousUser(){
   calcActiveUsers()
   // console.log("prev user RUN")
-  if(currentVisibleUser > firstActiveUser){ 
+  if(currentVisibleUser > firstActiveUser){
     userModals[currentVisibleUser].style.display= "none";
     userModals[previusActiveUser].style.display= "block";
     currentVisibleUser = previusActiveUser;
@@ -210,12 +208,14 @@ previousUser.addEventListener("click", function(event){
     userModals[lastActiveUser].style.display= "block";
     currentVisibleUser = lastActiveUser;
   }
-})
+}
 
-nextUser.addEventListener("click", function(event){
+
+
+function goToNextUser(){
   calcActiveUsers()
   // console.log("next user RUN")
-  if(currentVisibleUser < lastActiveUser){ 
+  if(currentVisibleUser < lastActiveUser){
     userModals[currentVisibleUser].style.display= "none";
     userModals[nextActiveUser].style.display= "block";
     currentVisibleUser= nextActiveUser;
@@ -224,7 +224,13 @@ nextUser.addEventListener("click", function(event){
     userModals[firstActiveUser].style.display= "block";
     currentVisibleUser = firstActiveUser;
   }
-})
+}
+
+
+
+
+
+
 
 
 $.ajax({
@@ -280,6 +286,14 @@ function keyDownTextField(e) {
 
 document.addEventListener("keydown", keyDownTextField, false);
 
+
+previousUser.addEventListener("click", function(event){
+  goToPreviousUser(event);
+})
+
+nextUser.addEventListener("click", function(event){
+  goToNextUser(event);
+})
 
 searchButton.addEventListener("click", function(event){
   event.preventDefault();
