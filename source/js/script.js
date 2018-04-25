@@ -268,7 +268,6 @@ function keyDownTextField(event) {
       hideAllUserModals();
     break;
 
-
     case 37:
       // alert('left');
       goToPreviousUser();
