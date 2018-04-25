@@ -46,6 +46,9 @@ html {
 .form__input:focus, .form__input--valid:focus, .form__input--invalid:focus, .timezone-selector:focus, .search__box:focus, .search__button:focus {
   outline: none; }
 
+.user-pain__window {
+  cursor: pointer; }
+
 .lowercase {
   text-transform: lowercase; }
 
@@ -801,7 +804,11 @@ h1.logo {
   width: 90%;
   height: 300px;
   padding: 25px;
-  margin: 15px; }
+  margin: 15px;
+  transition: transform 250ms; }
+  .user-pain__window:hover {
+    border-color: #83898d;
+    transform: scale(1.05); }
   @media (min-width: 769px) {
     .user-pain__window {
       flex-direction: row;

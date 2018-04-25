@@ -46,6 +46,7 @@
 
 
 .user-pain__window
+  @extend %hover-hand
   display: flex
   flex-direction: column
   align-self: center
@@ -56,6 +57,10 @@
   height: 300px
   padding: 25px
   margin: 15px
+  transition: transform 250ms
+  &:hover
+    border-color: $grey
+    transform: scale(1.05)
   @include mq(medium)
     flex-direction: row
     width: 450px
