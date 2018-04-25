@@ -268,9 +268,26 @@ function fliterUsers(){
 function keyDownTextField(event) {
   event.preventDefault();
   switch (event.keyCode) {
+
+
+    case 8:
+      // alert('backspace');
+      goToPreviousUser();
+    break;
+
+    case 13:
+      // alert('enter');
+      goToNextUser();
+    break;
+
     case 27:
       // alert('esc');
       hideAllUserModals();
+    break;
+
+    case 32:
+      // alert('space');
+      goToNextUser();
     break;
 
     case 37:
@@ -291,6 +308,26 @@ function keyDownTextField(event) {
     case 40:
       // alert('down');
       goToPreviousUser();
+    break;
+
+    case 65:
+      // alert('a');
+      goToPreviousUser();
+    break;
+
+    case 68:
+      // alert('d');
+      goToNextUser();
+    break;
+
+    case 83:
+      // alert('s');
+      goToPreviousUser();
+    break;
+
+    case 87:
+      // alert('w');
+      goToNextUser();
     break;
   }
 }
