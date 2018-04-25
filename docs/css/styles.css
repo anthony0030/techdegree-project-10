@@ -46,7 +46,8 @@ html {
 .form__input:focus, .form__input--valid:focus, .form__input--invalid:focus, .timezone-selector:focus, .search__box:focus, .search__button:focus {
   outline: none; }
 
-.user-pain__window {
+a, .btn, .btn--default, .btn--disabled, .btn--success, .btn--error, .btn--warning, .btn--info, .onoffswitch__label, .timezone-selector, .closebtn, .visits__option, .visits__option--active, .search__button, .user-pain__window, #user-modals .close, #user-modals #previous-user svg,
+#user-modals #next-user svg {
   cursor: pointer !important; }
 
 .lowercase {
@@ -64,9 +65,6 @@ html {
 
 body {
   background-color: #fcfcfc; }
-
-a {
-  cursor: pointer !important; }
 
 main {
   margin-top: 50px; }
@@ -224,12 +222,11 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
   border: none;
   border-radius: 10px;
   color: #ffffff;
-  cursor: pointer;
   text-align: center;
   padding: 0.625em;
   margin: 10px 0px; }
   .btn[disabled="true"], .btn--default[disabled="true"], .btn--disabled[disabled="true"], .btn--success[disabled="true"], .btn--error[disabled="true"], .btn--warning[disabled="true"], .btn--info[disabled="true"] {
-    cursor: not-allowed; }
+    cursor: not-allowed !important; }
   .btn[type="submit"], .btn--default[type="submit"], .btn--disabled[type="submit"], .btn--success[type="submit"], .btn--error[type="submit"], .btn--warning[type="submit"], .btn--info[type="submit"] {
     width: 100%;
     margin: 0.625em 0; }
@@ -276,7 +273,6 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
   .onoffswitch__label {
     display: block;
     overflow: hidden;
-    cursor: pointer;
     border: 2px solid #fcfcfc;
     border-radius: 50px; }
   .onoffswitch__switch {
@@ -513,7 +509,6 @@ div.contain {
   width: 100%;
   padding: 10px;
   text-indent: 1px;
-  cursor: pointer;
   margin-bottom: 25px;
   content: "Select Timezone";
   color: #404a51;
@@ -569,7 +564,6 @@ h1.logo {
   align-self: center;
   font-weight: bold;
   font-size: 20px;
-  cursor: pointer;
   transition: 0.3s;
   overflow: hidden;
   min-width: 40px; }
@@ -580,7 +574,6 @@ h1.logo {
   align-self: flex-end; }
 
 .visits__option, .visits__option--active {
-  cursor: pointer;
   color: #83898d;
   text-decoration: bold;
   display: inline-block;
@@ -647,7 +640,6 @@ h1.logo {
   width: 40px;
   height: 40px;
   padding: 0px;
-  cursor: pointer;
   border: 1px solid #dfdfdf;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -835,7 +827,6 @@ h1.logo {
     width: 10px;
     font-size: 20px;
     color: #000000;
-    cursor: pointer;
     position: absolute;
     top: 10px;
     right: 45px; }
@@ -873,7 +864,6 @@ h1.logo {
   #user-modals #next-user svg {
     width: 80px;
     height: 80px;
-    cursor: pointer;
     top: 325px;
     position: absolute;
     z-index: 10; }
