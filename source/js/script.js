@@ -145,14 +145,12 @@ function printUserModal(data, index){
 
 } // end of printUserModal
 
-modalContainer.addEventListener("click", function(event){
-  if(event.target === modalContainer || event.target.className === "close"){
-    modalContainer.style.display = "none";
-    $.each(userModals, function(index, value) {
-      userModals[index].style.display = "none";
-    })
-  }
-});
+function hideAllUserModals(){
+  modalContainer.style.display = "none";
+  $.each(userModals, function(index, value) {
+    userModals[index].style.display = "none";
+  })
+}
 
 
 function activateUsers(){
@@ -291,6 +289,11 @@ function keyDownTextField(event) {
 
 document.addEventListener("keydown", keyDownTextField, false);
 
+modalContainer.addEventListener("click", function(event){
+  if(event.target === modalContainer || event.target.className === "close"){
+    hideAllUserModals();
+  }
+});
 
 previousUser.addEventListener("click", function(event){
   goToPreviousUser(event);
