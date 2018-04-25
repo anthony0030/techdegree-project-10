@@ -874,7 +874,7 @@
 		"ft": 64,
 		"ma": 0,
 		"mi": 1,
-		"oA": 2,
+		"oA": 0,
 		"oAP": "\/docs\/js\/script.js",
 		"oF": 1,
 		"sC": 3,
@@ -1043,7 +1043,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-wonka",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 546355225
+	"lastBuiltDate": 546358123
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1442,7 +1442,7 @@
 		},
 	"esLintConfigFileHandlingType": 0,
 	"esLintECMAVersion": 7,
-	"esLintEnvironmentsMask": 1,
+	"esLintEnvironmentsMask": 8193,
 	"esLintRules": {
 		"accessor-pairs": {
 			"active": 0,
@@ -1537,11 +1537,11 @@
 			"optionString": ""
 			},
 		"curly": {
-			"active": 0,
+			"active": 1,
 			"optionString": "'all'"
 			},
 		"default-case": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"dot-location": {
@@ -1713,7 +1713,7 @@
 			"optionString": ""
 			},
 		"no-await-in-loop": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"no-bitwise": {
@@ -1741,7 +1741,7 @@
 			"optionString": ""
 			},
 		"no-compare-neg-zero": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"no-cond-assign": {
@@ -1813,7 +1813,7 @@
 			"optionString": ""
 			},
 		"no-empty-function": {
-			"active": 0,
+			"active": 1,
 			"optionString": "{'allow': []}"
 			},
 		"no-empty-pattern": {
@@ -1849,7 +1849,7 @@
 			"optionString": ""
 			},
 		"no-extra-parens": {
-			"active": 0,
+			"active": 1,
 			"optionString": "'all', {'conditionalAssign': false, 'returnAssign': false, 'nestedBinaryExpressions': false, 'ignoreJSX': 'none', 'enforceForArrowConditionals': false}"
 			},
 		"no-extra-semi": {
@@ -1861,7 +1861,7 @@
 			"optionString": ""
 			},
 		"no-floating-decimal": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"no-func-assign": {
@@ -1949,11 +1949,11 @@
 			"optionString": ""
 			},
 		"no-multi-spaces": {
-			"active": 0,
+			"active": 1,
 			"optionString": "{'exceptions': {'Property': true, 'BinaryExpression': false, 'VariableDeclarator': false, 'ImportDeclaration': false}}"
 			},
 		"no-multi-str": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"no-multiple-empty-lines": {
@@ -2105,7 +2105,7 @@
 			"optionString": ""
 			},
 		"no-template-curly-in-string": {
-			"active": 0,
+			"active": 1,
 			"optionString": ""
 			},
 		"no-ternary": {
@@ -2173,11 +2173,11 @@
 			"optionString": ""
 			},
 		"no-unused-vars": {
-			"active": 1,
+			"active": 0,
 			"optionString": "{'vars': 'all', 'args': 'after-used', 'caughtErrors': 'none', 'ignoreRestSiblings': false}"
 			},
 		"no-use-before-define": {
-			"active": 0,
+			"active": 1,
 			"optionString": "{'functions': true, 'classes': true, 'variables': true}"
 			},
 		"no-useless-call": {
@@ -2441,7 +2441,7 @@
 	"externalServerAddress": "http:\/\/localhost:8888",
 	"gitIgnoreBuildFolder": 0,
 	"hideConfigFile": 1,
-	"jsCheckerReservedNamesString": "",
+	"jsCheckerReservedNamesString": "convertStateRegion",
 	"jsHintFlags2": {
 		"asi": {
 			"active": 0,

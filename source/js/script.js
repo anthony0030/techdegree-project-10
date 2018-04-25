@@ -11,7 +11,7 @@ function dateConverter(date){
 // $( document ).ready(function() {
 
 const usersToMake = 12;
-const userNationalities = "US,CA"
+const userNationalities = "US,CA";
 
 const searchButton = document.getElementById("search__button");
 const searchQuestion = document.getElementById("search__question");
@@ -33,13 +33,13 @@ var nextActiveUser;
 var lastActiveUser;
 
 function printUser(data, index){
-  // console.log(data)
-  // console.log(data.gender)
+  // console.log(data);
+  // console.log(data.gender);
   const avatarSrc = data.picture.large;
   const nameText = data.name.first + " " + data.name.last;
   const emailText = data.email;
   const placeText = data.location.state;
-  const usernameText = data.login.username 
+  const usernameText = data.login.username;
 
   const user = document.createElement("DIV");
   user.classList.add("user-pain__window");
@@ -74,8 +74,8 @@ function printUser(data, index){
   details.appendChild(place);
 
   userContainer.appendChild(user);
-  usersNames.push(nameText)
-  usersUsernames.push(usernameText)
+  usersNames.push(nameText);
+  usersUsernames.push(usernameText);
   showUsers.push(true);
 } // end of printUser
 
@@ -83,13 +83,13 @@ function printUser(data, index){
 function printUserModal(data, index){
   // console.log(data)
   // console.log(data.gender)
-  const closeText = "×"
+  const closeText = "×";
   const avatarSrc = data.picture.large;
   const nameText = data.name.first + " " + data.name.last;
   const emailText = data.email;
   const placeText = data.location.state;
   const phoneText = data.cell;
-  const location = data.location
+  const location = data.location;
   const addressText = location.street+", "+location.city+" "+convertStateRegion(location.state)+" "+location.postcode;
   const bdayText = "Birthday: " + dateConverter(data.dob);
 
@@ -127,17 +127,17 @@ function printUserModal(data, index){
 
   const phone = document.createElement("P");
   phone.classList.add("user-modal__phone");
-  phone.appendChild(document.createTextNode(phoneText))
+  phone.appendChild(document.createTextNode(phoneText));
   modal.appendChild(phone);
 
   const address = document.createElement("P");
   address.classList.add("user-modal__address");
-  address.appendChild(document.createTextNode(addressText))
+  address.appendChild(document.createTextNode(addressText));
   modal.appendChild(address);
 
   const bday = document.createElement("P");
   bday.classList.add("user-modal__bday");
-  bday.appendChild(document.createTextNode(bdayText))
+  bday.appendChild(document.createTextNode(bdayText));
   modal.appendChild(bday);
 
   modalContainer.appendChild(modal);
@@ -148,7 +148,7 @@ function hideAllUserModals(){
   modalContainer.style.display = "none";
   $.each(userModals, function(index, value) {
     userModals[index].style.display = "none";
-  })
+  });
   currentVisibleUser= -1;
 }
 
@@ -161,8 +161,8 @@ function activateUsers(){
       modalContainer.style.display = "block";
       userModals[index].style.display = "block";
       currentVisibleUser = index;
-      console.log("i am user number: " + index);
-    })
+      // console.log("i am user number: " + index);
+    });
   });
 }
 
@@ -321,6 +321,10 @@ function keyDownTextField(event) {
     case 87:
       // alert('w');
       goToNextUser();
+    break;
+
+    default:
+      // alert(String.fromCharCode(event.keyCode)+" was pressed. With keyCode " +event.keyCode);
     break;
   }
 }
