@@ -800,13 +800,14 @@ h1.logo {
     color: #dfdfdf;
     border-color: #dfdfdf; }
   #user-modals .close {
-    height: 10px;
-    width: 10px;
-    font-size: 20px;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    line-height: 40px;
     color: #000000;
     position: absolute;
     top: 10px;
-    right: 45px; }
+    right: 10px; }
     #user-modals .close:active {
       fill: #ffffff; }
   #user-modals .user-modal {
