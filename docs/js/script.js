@@ -150,6 +150,7 @@ function hideAllUserModals(){
   $.each(userModals, function(index, value) {
     userModals[index].style.display = "none";
   })
+  currentVisibleUser= -1;
 }
 
 
@@ -195,32 +196,36 @@ function calcActiveUsers(){
 } // end of calcActiveUsers()
 
 function goToPreviousUser(){
-  calcActiveUsers()
-  // console.log("prev user RUN")
-  if(currentVisibleUser > firstActiveUser){
-    userModals[currentVisibleUser].style.display= "none";
-    userModals[previusActiveUser].style.display= "block";
-    currentVisibleUser = previusActiveUser;
-  } else {
-    userModals[currentVisibleUser].style.display= "none";
-    userModals[lastActiveUser].style.display= "block";
-    currentVisibleUser = lastActiveUser;
+  if(currentVisibleUser >= 0){
+    calcActiveUsers()
+    // console.log("prev user RUN")
+    if(currentVisibleUser > firstActiveUser){
+      userModals[currentVisibleUser].style.display= "none";
+      userModals[previusActiveUser].style.display= "block";
+      currentVisibleUser = previusActiveUser;
+    } else {
+      userModals[currentVisibleUser].style.display= "none";
+      userModals[lastActiveUser].style.display= "block";
+      currentVisibleUser = lastActiveUser;
+    }
   }
 }
 
 
 
 function goToNextUser(){
-  calcActiveUsers()
-  // console.log("next user RUN")
-  if(currentVisibleUser < lastActiveUser){
-    userModals[currentVisibleUser].style.display= "none";
-    userModals[nextActiveUser].style.display= "block";
-    currentVisibleUser= nextActiveUser;
-  } else {
-    userModals[currentVisibleUser].style.display= "none";
-    userModals[firstActiveUser].style.display= "block";
-    currentVisibleUser = firstActiveUser;
+  if(currentVisibleUser >= 0){
+    calcActiveUsers()
+    // console.log("next user RUN")
+    if(currentVisibleUser < lastActiveUser){
+      userModals[currentVisibleUser].style.display= "none";
+      userModals[nextActiveUser].style.display= "block";
+      currentVisibleUser= nextActiveUser;
+    } else {
+      userModals[currentVisibleUser].style.display= "none";
+      userModals[firstActiveUser].style.display= "block";
+      currentVisibleUser = firstActiveUser;
+    }
   }
 }
 
@@ -291,7 +296,8 @@ function keyDownTextField(event) {
 }
 
 
-document.addEventListener("keydown", keyDownTextField, false);
+document.addEventListener("keyup", keyDownTextField, false);
+searchQuestion.removeEventListener("keyup", keyDownTextField, true); 
 
 modalContainer.addEventListener("click", function(event){
   if(event.target === modalContainer || event.target.className === "close"){
