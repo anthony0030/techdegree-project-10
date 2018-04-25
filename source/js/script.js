@@ -12,6 +12,7 @@ function dateConverter(date){
 // $( document ).ready(function() {
 
 const usersToMake = 12;
+const userNationalities = "US,GB"
 
 const searchButton = document.getElementById("search__button");
 const searchQuestion = document.getElementById("search__question");
@@ -226,7 +227,7 @@ nextUser.addEventListener("click", function(event){
 
 
 $.ajax({
-  url: 'https://randomuser.me/api/?results=12',
+  url: 'https://randomuser.me/api/?results='+usersToMake+'&nat='+userNationalities,
   dataType: 'json',
   success: function(data){
     $.each(data.results, function( index, value ){
@@ -234,6 +235,7 @@ $.ajax({
       printUser(data.results[index],index);
     });
     activateUsers();
+    // console.log(data);
   }
 });
 
