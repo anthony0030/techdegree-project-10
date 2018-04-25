@@ -18,6 +18,9 @@
   width: 100%
   @include mq(medium)
     width: 50%
+  @include mq(large)
+    justify-content: flex-end
+    margin-right: 20px
 
 .search__box
   @extend %no-focus-outline
@@ -36,7 +39,7 @@
   flex-direction: column
   justify-content: space-between
   @include mq(large)
-    width: 80%
+    padding: 0 10%;
   @include mq(medium)
     flex-direction: row
 

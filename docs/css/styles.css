@@ -77,7 +77,7 @@ main {
   justify-content: space-between; }
   @media (min-width: 1024px) {
     .container {
-      width: 80%; } }
+      padding: 0 10%; } }
 
 .img, .img--logo, .img--frame, .img--avatar, .user_image {
   max-width: 100%;
@@ -170,8 +170,8 @@ h1 {
   @media (min-width: 769px) {
     .main__title {
       text-align: left;
-      margin: 0 60px;
-        margin-width: 50%; } }
+      margin: 0 20px;
+      width: 50%; } }
 
 h5 {
   text-transform: uppercase;
@@ -613,6 +613,10 @@ h1.logo {
   @media (min-width: 769px) {
     .search__form {
       width: 50%; } }
+  @media (min-width: 1024px) {
+    .search__form {
+      justify-content: flex-end;
+      margin-right: 20px; } }
 
 .search__box {
   width: 80%;
@@ -631,7 +635,7 @@ h1.logo {
   justify-content: space-between; }
   @media (min-width: 1024px) {
     .top__search {
-      width: 80%; } }
+      padding: 0 10%; } }
   @media (min-width: 769px) {
     .top__search {
       flex-direction: row; } }
