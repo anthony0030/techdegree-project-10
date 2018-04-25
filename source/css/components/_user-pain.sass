@@ -7,6 +7,10 @@
     color: $grey--dark
     margin: 20px 0
     font-size: 20px
+    @include mq(medium)
+      font-size: 50px
+    @include mq(large)
+      font-size: 20px
   &__text
     display: inline-block
     color: $grey
@@ -14,7 +18,7 @@
     color: $grey
     font-weight: $font-weight--medium
     margin-bottom: 20px
-    margin: 0
+    margin: 25px 0px
   &__place
     font-weight: $font-weight--medium
     color: $grey
@@ -22,22 +26,32 @@
     margin-top: 10px
   &__photo
     display: inline-block
-    margin-right: 15px
+    margin-right: 25px
     align-self: center
-    @include mq(large)
+    @include mq(medium)
       align-self: left
   &__details
     display: inline-block
     align-self: center
     text-align: center
-    @include mq(large)
+    @include mq(medium)
+      font-size: 25px
       align-self: left
       text-align: left
+    @include mq(large)
+      font-size: 16px
   &__avatar
     border-radius: $br--round
     display: inline-block
     width: 125px
     height: 125px
+    @include mq(medium)
+      width: 200px
+      height: 200px
+    @include mq(large)
+      width: 125px
+      height: 125px
+
   &__window
     @extend %hover-hand
     display: flex
@@ -54,7 +68,16 @@
     &:hover
       border-color: $grey
       transform: scale(1.05)
-    @include mq(large)
+    @include mq(medium)
       flex-direction: row
-      width: 404px
+      height: 250px
+    margin: 15px
+    margin: 15px auto
+    @include mq(large)
       height: 180px
+      width: 404px
+    @include mq(giga)
+      width: 420px
+
+
+

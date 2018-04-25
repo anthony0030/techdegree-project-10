@@ -22,6 +22,9 @@ html {
     @media (min-width: 1024px) {
       html body::before {
         content: "DESKTOP"; } }
+    @media (min-width: 1200px) {
+      html body::before {
+        content: "GIGA"; } }
 
 .grid:after {
   content: "";
@@ -879,6 +882,12 @@ h1.logo {
     color: #404a51;
     margin: 20px 0;
     font-size: 20px; }
+    @media (min-width: 769px) {
+      .user-pain__title {
+        font-size: 50px; } }
+    @media (min-width: 1024px) {
+      .user-pain__title {
+        font-size: 20px; } }
   .user-pain__text {
     display: inline-block;
     color: #83898d; }
@@ -886,7 +895,7 @@ h1.logo {
     color: #83898d;
     font-weight: 400;
     margin-bottom: 20px;
-    margin: 0; }
+    margin: 25px 0px; }
   .user-pain__place {
     font-weight: 400;
     color: #83898d;
@@ -894,10 +903,10 @@ h1.logo {
     margin-top: 10px; }
   .user-pain__photo {
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 25px;
     -ms-flex-item-align: center;
         align-self: center; }
-    @media (min-width: 1024px) {
+    @media (min-width: 769px) {
       .user-pain__photo {
         -ms-flex-item-align: left;
             align-self: left; } }
@@ -906,16 +915,28 @@ h1.logo {
     -ms-flex-item-align: center;
         align-self: center;
     text-align: center; }
-    @media (min-width: 1024px) {
+    @media (min-width: 769px) {
       .user-pain__details {
+        font-size: 25px;
         -ms-flex-item-align: left;
             align-self: left;
         text-align: left; } }
+    @media (min-width: 1024px) {
+      .user-pain__details {
+        font-size: 16px; } }
   .user-pain__avatar {
     border-radius: 50%;
     display: inline-block;
     width: 125px;
     height: 125px; }
+    @media (min-width: 769px) {
+      .user-pain__avatar {
+        width: 200px;
+        height: 200px; } }
+    @media (min-width: 1024px) {
+      .user-pain__avatar {
+        width: 125px;
+        height: 125px; } }
   .user-pain__window {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -936,19 +957,27 @@ h1.logo {
     -webkit-transition: -webkit-transform 250ms;
     transition: -webkit-transform 250ms;
     transition: transform 250ms;
-    transition: transform 250ms, -webkit-transform 250ms; }
+    transition: transform 250ms, -webkit-transform 250ms;
+    margin: 15px;
+    margin: 15px auto; }
     .user-pain__window:hover {
       border-color: #83898d;
       -webkit-transform: scale(1.05);
               transform: scale(1.05); }
-    @media (min-width: 1024px) {
+    @media (min-width: 769px) {
       .user-pain__window {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
             -ms-flex-direction: row;
                 flex-direction: row;
-        width: 404px;
-        height: 180px; } }
+        height: 250px; } }
+    @media (min-width: 1024px) {
+      .user-pain__window {
+        height: 180px;
+        width: 404px; } }
+    @media (min-width: 1200px) {
+      .user-pain__window {
+        width: 420px; } }
 
 #user-modals {
   display: none;
