@@ -1,31 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
 @import url(../bower_components/normalize-css/normalize.css);
-html {
-  /* ----------------------------*/
-  /* Screen size indicator Start */
-  /* ----------------------------*/
-  /* ----------------------------*/
-  /* Screen size indicator end   */
-  /* ----------------------------*/ }
-  html body::before {
-    z-index: 99999;
-    color: red;
-    position: fixed;
-    top: 0;
-    left: 0; }
-    @media (min-width: 320px) {
-      html body::before {
-        content: "MOBILE"; } }
-    @media (min-width: 768px) {
-      html body::before {
-        content: "TABLET"; } }
-    @media (min-width: 1024px) {
-      html body::before {
-        content: "DESKTOP"; } }
-    @media (min-width: 1200px) {
-      html body::before {
-        content: "GIGA"; } }
-
 .grid:after {
   content: "";
   display: table;
