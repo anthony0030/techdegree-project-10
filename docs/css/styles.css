@@ -38,11 +38,7 @@ a, .btn, .btn--default, .btn--disabled, .btn--success, .btn--error, .btn--warnin
 
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
+          box-sizing: border-box; }
 
 body {
   background-color: #fcfcfc; }
