@@ -1,1 +1,1 @@
-function dateConverter(t){const e=t.split("-"),r=e[0].substring(2),n=e[1];return e[2].split(" ")[0]+"/"+n+"/"+r}function toTitleCase(t){return t.replace(/\w\S*/g,function(t){return t.charAt(0).toUpperCase()+t.substr(1).toLowerCase()})}
+function dateConverter(t){const e=t.date.split("-"),r=e[0].substring(2),n=e[1];return e[2].split(" ")[0]+"/"+n+"/"+r}function toTitleCase(t){return t.replace(/\w\S*/g,function(t){return t.charAt(0).toUpperCase()+t.substr(1).toLowerCase()})}
