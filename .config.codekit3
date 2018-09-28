@@ -886,7 +886,7 @@
 	"/source/js/helpers.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "/docs/js/helpers.js",
 		"oF": 1,
@@ -896,7 +896,7 @@
 	"/source/js/script.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "/docs/js/script.js",
 		"oF": 1,
@@ -906,7 +906,7 @@
 	"/source/js/state_abbreviator.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "/docs/js/state_abbreviator.js",
 		"oF": 1,
@@ -1066,7 +1066,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-wonka",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 558542209
+	"lastBuiltDate": 559814117.65545404
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
