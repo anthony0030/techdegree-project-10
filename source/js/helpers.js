@@ -3,7 +3,7 @@ function dateConverter(date){
   const splitDate = date.date.split("-");
   const year = splitDate[0].substring(2);
   const month = splitDate[1];
-  const splitDay = splitDate[2].split(" ");
+  const splitDay = splitDate[2].split("T");
   const day = splitDay[0];
   return day + "/" + month + "/" + year;
 }

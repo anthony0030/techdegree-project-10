@@ -1,1 +1,13 @@
-function dateConverter(t){const e=t.date.split("-"),r=e[0].substring(2),n=e[1];return e[2].split(" ")[0]+"/"+n+"/"+r}function toTitleCase(t){return t.replace(/\w\S*/g,function(t){return t.charAt(0).toUpperCase()+t.substr(1).toLowerCase()})}
+//converts date format from "2014-12-11 14:35:49" into 11/12/14
+function dateConverter(date){ 
+  const splitDate = date.date.split("-");
+  const year = splitDate[0].substring(2);
+  const month = splitDate[1];
+  const splitDay = splitDate[2].split("T");
+  const day = splitDay[0];
+  return day + "/" + month + "/" + year;
+}
+
+function toTitleCase(str){
+  return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}
