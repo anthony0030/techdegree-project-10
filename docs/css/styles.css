@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900");
-@import url(../bower_components/normalize-css/normalize.css);
+@import url(../node_modules/normalize-css/normalize.css);
 .grid:after {
   content: "";
   display: table;
@@ -49,9 +49,11 @@ main {
   margin: 0;
   padding-top: 2.5em;
   margin: auto;
+  display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  -webkit-box-pack: justify;
+          justify-content: space-between; }
   @media (min-width: 1024px) {
     .container {
       padding: 0 10%; } }
@@ -71,7 +73,8 @@ main {
     width: 50px; }
 
 .user_curent--col {
-  justify-content: unset !important; }
+  -webkit-box-pack: unset !important;
+          justify-content: unset !important; }
 
 .user_curent {
   align-self: center; }
@@ -163,8 +166,11 @@ h5 {
           user-select: text; }
 
 .form {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   width: 100%; }
 
 .form__input, .form__input--valid, .form__input--invalid {
@@ -195,7 +201,8 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
   display: none; }
 
 .btn, .btn--default, .btn--disabled, .btn--success, .btn--error, .btn--warning, .btn--info {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
   display: inline-block;
   width: 100%;
   text-transform: uppercase;
@@ -269,11 +276,13 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
     right: 62px;
     border: 2px solid #fcfcfc;
     border-radius: 50px;
+    -webkit-transition: all 0.3s ease-in 0s;
     transition: all 0.3s ease-in 0s; }
   .onoffswitch__inner {
     display: block;
     width: 200%;
     margin-left: -100%;
+    -webkit-transition: margin 0.3s ease-in 0s;
     transition: margin 0.3s ease-in 0s; }
     .onoffswitch__inner:before, .onoffswitch__inner:after {
       display: block;
@@ -354,14 +363,18 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
 
 [class^="grid__col--"] {
   padding: 0.625em;
+  display: -webkit-box;
   display: flex;
   justify-content: space-around; }
   @media (min-width: 320px) and (max-width: 768px) {
     [class^="grid__col--"] {
       margin-top: 0.75em;
       margin-bottom: 0.75em;
-      flex-direction: column;
-      justify-content: center; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column;
+      -webkit-box-pack: center;
+              justify-content: center; } }
   @media (min-width: 769px) {
     [class^="grid__col--"] {
       float: left;
@@ -375,33 +388,45 @@ textarea.form__input, textarea.form__input--valid, textarea.form__input--invalid
 
 @media (min-width: 769px) {
   .grid__row {
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between; } }
+    -webkit-box-pack: justify;
+            justify-content: space-between; } }
 
 .flex {
+  display: -webkit-box;
   display: flex; }
   @media (min-width: 320px) and (max-width: 768px) {
     .flex {
-      flex-direction: column; } }
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+              flex-direction: column; } }
 
 .flex__alighn--left {
-  justify-content: left; }
+  -webkit-box-pack: left;
+          justify-content: left; }
 
 .flex__alighn--center {
-  justify-content: center; }
+  -webkit-box-pack: center;
+          justify-content: center; }
 
 .flex__alighn--right {
-  justify-content: right; }
+  -webkit-box-pack: right;
+          justify-content: right; }
 
 .row {
+  display: -webkit-box;
   display: flex;
   margin-bottom: 15px;
   width: 100%; }
 
 div.contain {
   width: 100%;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   padding: 5px; }
 
 .no-margin {
@@ -425,16 +450,24 @@ div.contain {
     margin-left: 60px; } }
 
 .all-social-stats {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  justify-content: center; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: center;
+          justify-content: center; }
 
 @media (min-width: 769px) {
   .all-social-stats {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
     justify-content: space-around; }
   .social-stats-col {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     padding-top: 30px;
     padding-bottom: 30px; }
   .social-stats-title {
@@ -511,7 +544,8 @@ h1.logo {
 .logo--col {
   z-index: 11;
   background-color: #7377bd;
-  justify-content: left; }
+  -webkit-box-pack: left;
+          justify-content: left; }
   @media (min-width: 769px) {
     .logo--col {
       width: 180px; } }
@@ -523,8 +557,10 @@ h1.logo {
   padding: 10px 0 10px 20px;
   background-color: #000000;
   color: white;
+  display: -webkit-box;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   margin-bottom: 5px;
   border-radius: 10px; }
   .alert--default {
@@ -549,6 +585,7 @@ h1.logo {
   align-self: center;
   font-weight: bold;
   font-size: 20px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   overflow: hidden;
   min-width: 40px; }
@@ -589,15 +626,18 @@ h1.logo {
   margin: 0 auto; }
 
 .search__form {
+  display: -webkit-box;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   width: 100%; }
   @media (min-width: 769px) {
     .search__form {
       width: 50%; } }
   @media (min-width: 1024px) {
     .search__form {
-      justify-content: flex-end;
+      -webkit-box-pack: end;
+              justify-content: flex-end;
       margin-right: 20px; } }
 
 .search__box {
@@ -612,15 +652,21 @@ h1.logo {
   align-self: center; }
 
 .top__search {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+          justify-content: space-between; }
   @media (min-width: 1024px) {
     .top__search {
       padding: 0 10%; } }
   @media (min-width: 769px) {
     .top__search {
-      flex-direction: row; } }
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+              flex-direction: row; } }
 
 .search__button {
   width: 40px;
@@ -701,8 +747,10 @@ h1.logo {
     -webkit-animation: slideDown 0.4s;
             animation: slideDown 0.4s; }
   .modal__header {
+    display: -webkit-box;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
     background-color: #000000; }
   .modal__body {
     padding: 30px 16px 25px 16px;
@@ -799,8 +847,11 @@ h1.logo {
         width: 125px;
         height: 125px; } }
   .user-pain__window {
+    display: -webkit-box;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
     align-self: center;
     border-radius: 10px;
     border: 2px solid #dfdfdf;
@@ -809,6 +860,7 @@ h1.logo {
     height: 300px;
     padding: 25px;
     margin: 15px auto;
+    -webkit-transition: -webkit-transform 250ms;
     transition: -webkit-transform 250ms;
     transition: transform 250ms;
     transition: transform 250ms, -webkit-transform 250ms;
@@ -820,7 +872,9 @@ h1.logo {
               transform: scale(1.05); }
     @media (min-width: 769px) {
       .user-pain__window {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+                flex-direction: row;
         height: 250px; } }
     @media (min-width: 1024px) {
       .user-pain__window {
