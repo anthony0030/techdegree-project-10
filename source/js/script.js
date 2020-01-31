@@ -80,7 +80,7 @@ function printUserModal(data, index){
   const placeText = toTitleCase(data.location.state);
   const stateText = convertStateRegion(data.location.state);
   const phoneText = data.cell;
-  const streetText = toTitleCase(data.location.street);
+  const streetText = toTitleCase(data.location.street.name);
   const cityText = toTitleCase(data.location.city);
   const posteCode = data.location.postcode;
   const addressText = streetText+", "+cityText+" "+stateText+" "+posteCode;
