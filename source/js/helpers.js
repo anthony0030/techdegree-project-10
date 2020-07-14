@@ -9,5 +9,5 @@ function dateConverter(date){
 }
 
 function toTitleCase(str){
-  return str
+  return str;
 }
