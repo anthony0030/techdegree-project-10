@@ -80,6 +80,14 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"/source/.nojekyll": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/docs/.nojekyll",
+		"oF": 0
+		},
 	"/source/_favicon.jade": {
 		"cB": 0,
 		"cOD": 1,
@@ -1006,7 +1014,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "meme-wonka",
 	"iconImageWasSetByUser": 0,
-	"lastBuiltDate": 626085209.26853895
+	"lastBuiltDate": 629289065.65385902
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
