@@ -1,0 +1,27 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Awesome Startup - Employee Directory
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='css/styles.css')
+    include _favicon.pug
+    script(src="node_modules/jquery/dist/jquery.min.js")
+  body
+    headder
+    main
+      div.top__search
+        h1.main__title.uppercase Awesome Startup Employee Directory
+        form.search__form
+          input#search__question.search__box(type="text" placeholder="Search")
+          button#search__button.search__button
+      div#users.container
+      div#user-modals
+        span#previous-user
+          include svg/icon-arrow-left.svg
+        span#next-user
+          include svg/icon-arrow-right.svg
+    footer
+    script(src="js/helpers.js")
+    script(src="js/state_abbreviator.js")
+    script(src="js/script.js")
